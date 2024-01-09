@@ -1,3 +1,14 @@
-<p>
-  Hello there
-</p>
+<!--
+  app-item-detail is the child selector
+  [item], the target, is the @Input() property from child
+  "currentItem", the source, is the property from the parent
+-->
+<app-item-detail 
+  [item]="currentItem"
+  (newItemEvent)="addItem($event)">
+</app-item-detail>
+
+<ul>
+  <li *ngFor="let item of items">{{item}}</li>
+</ul>
+
