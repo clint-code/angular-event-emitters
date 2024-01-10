@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'angular-event-emitters';
   currentItem = 'Television';
 
-  items = ['item1', 'item2'];
+  items = [];
 
   addItem(newItem: string) {
     this.items.push(newItem);

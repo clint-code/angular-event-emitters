@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import $ from 'jquery';
 
 @Component({
   selector: 'app-item-detail',
@@ -27,8 +28,11 @@ export class ItemDetailComponent implements OnInit {
   constructor() { }
 
   addNewItem(value: string) {
+
     this.newItemEvent.emit(value);
-    console.log(value);
+
+    $('#item-input').val('');
+
   }
 
   ngOnInit(): void {
